@@ -17,7 +17,13 @@ facts 最多 8 条，只填 self_report 为 true 的真实消息 id。
 没有可靠事实时返回空数组。"""
 
 
+class PluginSection(PluginConfigBase):
+    config_version: str = Field(default="1.0.0", description="配置格式版本")
+    enabled: bool = Field(default=True, description="是否启用插件")
+
+
 class Config(PluginConfigBase):
+    plugin: PluginSection = Field(default_factory=PluginSection)
     model_name: str = Field(default="", description="指定模型名，留空使用 MaiBot 的记忆模型分工")
     interval_seconds: int = Field(default=300, ge=30, le=3600, description="检查新消息的间隔（秒）")
 
