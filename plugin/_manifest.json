@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "id": "endedge.passive-memory",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "静默群聊记忆",
   "description": "整理指定 QQ 群的长期记忆和人物事实",
   "author": {
@@ -25,5 +25,11 @@
     "chat.get_group_streams",
     "llm.generate",
     "passive_memory.batch"
-  ]
+  ],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  }
 }
