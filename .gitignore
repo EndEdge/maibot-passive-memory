@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+config.toml
+state.json
+.env

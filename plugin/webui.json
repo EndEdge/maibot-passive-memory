@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "required_capabilities": [
+    "custom_pages",
+    "structured_arguments"
+  ],
+  "pages": [
+    {
+      "id": "groups",
+      "title": "静默群聊记忆",
+      "mode": "custom",
+      "entry": "webui/groups.html",
+      "layout": "document",
+      "queries": {
+        "groups": {
+          "api": "groups"
+        }
+      },
+      "actions": {
+        "save": {
+          "api": "save_groups",
+          "parameters": {
+            "selected": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "required": true,
+              "max_items": 1000
+            }
+          }
+        }
+      }
+    }
+  ]
+}

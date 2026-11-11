@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "id": "endedge.passive-memory",
+  "version": "0.1.0",
+  "name": "静默群聊记忆",
+  "description": "整理指定 QQ 群的长期记忆和人物事实",
+  "author": {
+    "name": "EndEdge",
+    "url": "https://github.com/EndEdge"
+  },
+  "license": "GPL-3.0-or-later",
+  "urls": {
+    "repository": "https://github.com/EndEdge/maibot-passive-memory"
+  },
+  "host_application": {
+    "min_version": "1.4.3",
+    "max_version": "1.4.3"
+  },
+  "sdk": {
+    "min_version": "2.22.1",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [],
+  "capabilities": [
+    "chat.get_group_streams",
+    "llm.generate",
+    "passive_memory.batch"
+  ]
+}
